@@ -64,7 +64,6 @@ section input:focus {
 }
 
 ::-webkit-datetime-edit {
-    color: transparent;
     font-family: Helvetica, Tahoma, sans-serif;
 }
 
@@ -84,6 +83,10 @@ section button {
 
 section button:hover {
     background: #9e6eff;
+}
+
+section button:focus {
+    outline: none;
 }
 
 /* Table */
@@ -116,8 +119,10 @@ th {
 }
 
 tbody {
-    background: #e9eaf0;
+    background: #ebecf5;
     border-top: none;
+    font-size: 18px;
+    font-weight: lighter;
 }
 
 td {
