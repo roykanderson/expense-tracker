@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Tahoma, sans-serif;
+    background: #f7f7f7;
+}
+
+/* Header */
+
+header {
+    height: 100px;
+    background: #7381d1;
+}
+
+header h1 {
+    padding: 29px;
+    margin: 0;
+    text-align: center;
+    color: #f7f7f7;
+    font-weight: normal;
+    font-size: 35px;
+    letter-spacing: 20px;
+}
+
+/* 2nd heading */
+
+h2 {
+    font-weight: normal;
+    font-size: 22px;
+    text-align: center;
+    padding: 20px;
+    color: #363636;
+}
+
+/* Input area */
+
+section {
+    margin: auto;
+    width: 75%;
+    position: relative;
+}
+
+section p {
+    display: inline;
+    font-size: 17px;
+    margin: 0;
+    margin-left: 2%;
+    margin-right: 0.1%;
+    color: #363636;
+}
+
+section input {
+    border: 1px solid #363636;
+    border-radius: 10px;
+    height: 20px;
+    padding: 5px;
+    font-size: 15px;
+    width: 20%;
+    background: #f7f7f7;
+}
+
+section input:focus {
+    outline: none;
+}
+
+::-webkit-datetime-edit {
+    color: transparent;
+    font-family: Helvetica, Tahoma, sans-serif;
+}
+
+:focus::-webkit-datetime-edit { color: #363636; }
+
+section button {
+    display: block;
+    height: 50px;
+    width: 150px;
+    margin: 40px auto;
+    background: #864aff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+}
+
+section button:hover {
+    background: #9e6eff;
+}
+
+/* Table */
+
+table {
+    margin: auto;
+    width: 75%;
+    border: 1px solid #f7f7f7;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: #d2d9fa;
+    border: 2px solid #f7f7f7;
+    border-bottom: none;
+    border-right: none;
+    margin: 0;
+    padding: none;
+    color: #363636;
+}
+
+th {
+    /* border: 2px solid #ffffff;
+    border-bottom: none;
+    border-inline-end: none; */
+    padding: 10px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+tbody {
+    background: #e9eaf0;
+    border-top: none;
+}
+
+td {
+    border-top: none;
+    padding: 10px;
+}
