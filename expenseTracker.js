@@ -28,13 +28,17 @@ function Expense(name, date, amount) {
 
 function handleAdd() {
     if (!elements.nameInput.value || !elements.dateInput.value || !elements.amountInput.value) {
-        instructions.innerHTML = "Please enter a valid input.";
+        elements.instructions.innerHTML = "Please enter a valid input.";
     } else {
         checkEmpty();
         removeTotalRow();
         let expense = new Expense(elements.nameInput.value, elements.dateInput.value, elements.amountInput.value);
         expense.add();
         updateTotal();
+        elements.nameInput.value = "";
+        elements.dateInput.value = "";
+        elements.amountInput.value = "";
+        elements.instructions.innerHTML = "Add an expense below";
     }
 }
 
