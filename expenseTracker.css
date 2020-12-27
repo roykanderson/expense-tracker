@@ -28,7 +28,7 @@ h2 {
     font-weight: normal;
     font-size: 22px;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     color: #363636;
 }
 
@@ -40,12 +40,15 @@ section {
     position: relative;
 }
 
+.box {
+    margin: auto;
+    text-align: center;
+}
+
 section p {
-    display: inline;
     font-size: 17px;
     margin: 0;
-    margin-left: 2%;
-    margin-right: 0.1%;
+    padding: 6px 0;
     color: #363636;
 }
 
@@ -55,7 +58,7 @@ section input {
     height: 20px;
     padding: 5px;
     font-size: 15px;
-    width: 20%;
+    width: 60%;
     background: #f7f7f7;
 }
 
@@ -68,6 +71,16 @@ section input:focus {
 }
 
 :focus::-webkit-datetime-edit { color: #363636; }
+
+.box1 {
+    width: 77%;
+    margin: auto;
+}
+
+.box2 {
+    display: inline-block;
+    width: 49.5%;
+}
 
 section button {
     display: block;
@@ -128,4 +141,16 @@ tbody {
 td {
     border-top: none;
     padding: 10px;
+    width: 30%;
+}
+
+i {
+    float: right;
+    margin-right: 10px;
+    color: #7e8192;
+    font-size: 20px;
+}
+
+i:hover {
+    color: #b2b6ce;
 }
