@@ -31,8 +31,10 @@ function handleAdd() {
         instructions.innerHTML = "Please enter a valid input.";
     } else {
         checkEmpty();
+        removeTotalRow();
         let expense = new Expense(elements.nameInput.value, elements.dateInput.value, elements.amountInput.value);
         expense.add();
+        updateTotal();
     }
 }
 
@@ -41,7 +43,13 @@ function handleDelete(e) {
     let td = icon.parentElement;
     let tr = td.parentElement;
     tr.remove();
+    removeTotalRow();
     checkEmpty();
+
+    if (elements.tableBody.firstElementChild.id !== "empty") {
+        console.log("HEre's freedyy!")
+        updateTotal();
+    }
 }
 
 function handleClear() {
@@ -67,6 +75,47 @@ function checkEmpty() {
 
         row.appendChild(td);
         elements.tableBody.appendChild(row);
+    }
+}
+
+function updateTotal() { // called in handleAdd
+    let children = elements.tableBody.children;
+
+    let total = 0;
+    for (let i = 0; i < children.length; i++) {
+        amount = children[i].lastChild.innerText;
+        console.log("total: " + total);
+        console.log("amount: " + Number(amount.substring(1)));
+        total = total + Number(amount.substring(1));
+    }
+
+    let tr = document.createElement("tr");
+    tr.setAttribute("id", "total");
+
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
+    let td3 = document.createElement("td");
+
+    td1.innerHTML = "Total:";
+    td3.innerHTML = "$" + total;
+    
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+
+    elements.tableBody.appendChild(tr);
+}
+
+function removeTotalRow() {
+    let children = elements.tableBody.children;
+
+    if (children.length > 1) {
+        console.log("length" + children.length);
+        children[children.length - 1].remove(); // remove the old total row
+    } else if (children.length === 1) {
+        if (children[0].id === "total") {
+            children[0].remove();
+        }
     }
 }
 
